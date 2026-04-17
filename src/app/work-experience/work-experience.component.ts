@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WorkExperienceService } from "../../services/work-experience-service/work-experience.service";
 
 @Component({
   selector: 'app-work-experience',
@@ -8,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './work-experience.component.scss'
 })
 export class WorkExperienceComponent {
+  constructor(public workExperienceService: WorkExperienceService){
+    console.log(this.workExperienceService);
+  }
 
 }

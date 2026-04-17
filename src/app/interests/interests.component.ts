@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { InterestsService } from '../../services/interests-service/interests.service';
 
 @Component({
   selector: 'app-interests',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './interests.component.scss'
 })
 export class InterestsComponent {
-
+  constructor(public interestsService:InterestsService){
+    console.log(this.interestsService);
+  }
 }
