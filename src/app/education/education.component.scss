@@ -1,12 +1,52 @@
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+h2 {
+  color: #2980b9;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
 
-  .skill-item {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.9rem;
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .education-item {
+    border-left: 3px solid #e67e22;
+    padding-left: 20px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 0;
+      width: 13px;
+      height: 13px;
+      background: #e67e22;
+      border-radius: 50%;
+    }
+
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+
+      h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #2c3e50;
+      }
+
+      .school {
+        font-weight: 600;
+        color: #d35400;
+      }
+    }
+
+    .edu-meta {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+    }
   }
 }

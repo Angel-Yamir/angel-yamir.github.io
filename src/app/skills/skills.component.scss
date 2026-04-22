@@ -1,12 +1,27 @@
+h3 {
+  color: #2980b9;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 
   .skill-item {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 5px 12px;
+    background: #3498db;
+    color: white;
+    padding: 6px 15px;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
   }
 }

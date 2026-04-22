@@ -1,1 +1,6 @@
-<p>languages works!</p>
+<h3>Idiomas</h3>
+<ul class="languages-list">
+    @for (lang of languages; track lang.id) {
+    <li>{{ lang.language }}</li>
+    }
+</ul>

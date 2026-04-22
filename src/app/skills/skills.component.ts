@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { SkillsService } from "../../services/skills-service/skills.service";
+import { Skill } from '../modelos/skill/skill.model';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-skills',
@@ -9,7 +11,17 @@ import { SkillsService } from "../../services/skills-service/skills.service";
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
-  constructor (public skillsService: SkillsService){
-    console.log(this.skillsService);
+  skills: Skill[] = [];
+
+  constructor(public skillsService: SkillsService) {
+    this.skillsService.getSkills().snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c =>
+          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
+        )
+      )
+    ).subscribe(data => {
+      this.skills = data;
+    });
   }
 }

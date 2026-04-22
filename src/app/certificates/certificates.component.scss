@@ -1,12 +1,37 @@
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+h2 {
+  color: #2980b9;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
 
-  .skill-item {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.9rem;
+.certificates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .certificate-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: #fdfdfd;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border-color: #3498db;
+    }
+
+    .icon {
+      font-size: 1.2rem;
+    }
+
+    .title {
+      font-weight: 500;
+      color: #2c3e50;
+    }
   }
 }
