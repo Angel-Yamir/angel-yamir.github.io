@@ -1,0 +1,9 @@
+<h2>Certificados</h2>
+<div class="certificates-list">
+    @for (cert of certificates; track cert.id) {
+    <div class="certificate-item">
+        <span class="icon">🏆</span>
+        <span class="title">{{ cert.title }}</span>
+    </div>
+    }
+</div>

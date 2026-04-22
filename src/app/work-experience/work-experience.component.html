@@ -1,0 +1,16 @@
+<h2>Experiencia Laboral</h2>
+<div class="work-experience-list">
+  @for (experience of workExperiences; track experience.id) {
+    <div class="experience-item">
+      <div class="experience-header">
+        <h3>{{ experience.position }}</h3>
+        <span class="company">{{ experience.company }}</span>
+      </div>
+      <div class="experience-meta">
+        <span class="dates">{{ experience.startDate }} - {{ experience.endDate }}</span>
+        <span class="location"> | {{ experience.location }}</span>
+      </div>
+      <p class="accomplishments">{{ experience.accomplishments }}</p>
+    </div>
+  }
+</div>

@@ -1,0 +1,14 @@
+<h2>Educación</h2>
+<div class="education-list">
+    @for (edu of educationList; track edu.id) {
+    <div class="education-item">
+        <div class="edu-header">
+            <h3>{{ edu.title }}</h3>
+            <span class="school">{{ edu.school }}</span>
+        </div>
+        <div class="edu-meta">
+            <span class="dates">{{ edu.startDate }} - {{ edu.endDate }}</span>
+        </div>
+    </div>
+    }
+</div>

@@ -1,0 +1,33 @@
+h3 {
+  color: #2980b9;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.languages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 8px 0;
+    font-size: 1rem;
+    color:#ecf0f1;
+    border-bottom: 1px solid #f7f9fa;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &::before {
+      content: '•';
+      color: #3498db;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+      padding-left: 20px;
+    }
+  }
+}
