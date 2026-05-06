@@ -10,7 +10,15 @@
         <span class="dates">{{ experience.startDate }} - {{ experience.endDate }}</span>
         <span class="location"> | {{ experience.location }}</span>
       </div>
-      <p class="accomplishments">{{ experience.accomplishments }}</p>
+      
+      <!-- Actualización: Iteración sobre el nuevo formato de arreglo -->
+      @if (experience.accomplishments && experience.accomplishments.length > 0) {
+        <ul class="accomplishments-list">
+          @for (achievement of experience.accomplishments; track $index) {
+            <li>{{ achievement }}</li>
+          }
+        </ul>
+      }
     </div>
   }
 </div>
