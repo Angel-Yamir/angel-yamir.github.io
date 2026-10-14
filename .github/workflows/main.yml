@@ -42,3 +42,6 @@ jobs:
           tags: |
             ${{ secrets.DOCKER_USER }}/mycv:latest
             ${{ secrets.DOCKER_USER }}/mycv:${{ github.sha }}
+      - name: Deploy to Render
+        if: github.event_name == 'push'
+        run: curl -fsS "${{ secrets.RENDER_DEPLOY_HOOK }}&imgURL=docker.io/${{ secrets.DOCKER_USER }}/mycv:${{ github.sha }}"
